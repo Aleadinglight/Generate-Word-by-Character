@@ -38,3 +38,8 @@ p = WordProcessing.Process()
 X_train, Y_train = p.giveInput()
 model = PWNet.RNNnp(29)
 train_with_sgd(model, X_train, Y_train)
+
+
+
+
+
