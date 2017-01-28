@@ -22,7 +22,6 @@ def train_with_sgd(model, X_train, Y_train, learning_rate=0.0001, nepoch=1000, e
                 break
             if (len(losses)>1 and losses[-1][1] <= losses[-2][1]):
                 save_model_parameters("Canh", model)
-#            save_model_parameters("Canh", model)
         # For each training example...
         for i in range(len(Y_train)):
             # One SGD step
