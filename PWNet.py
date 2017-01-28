@@ -8,11 +8,11 @@ class RNNnp():
         self.bptt_truncate = bptt_truncate
         self.hidden_dim = hidden_dim
         self.letter_dim = letter_dim
-        # U = 100x29
+        # U = 200x29
         self.U = np.random.uniform(-np.sqrt(1./hidden_dim), np.sqrt(1./letter_dim), (hidden_dim, letter_dim))
-        # V = 29x100
+        # V = 29x200
         self.V = np.random.uniform(-np.sqrt(1./letter_dim), np.sqrt(1./hidden_dim), (letter_dim, hidden_dim))
-        # W = 100x100
+        # W = 200x200
         self.W = np.random.uniform(-np.sqrt(1./hidden_dim), np.sqrt(1./hidden_dim), (hidden_dim, hidden_dim))
         self.U, self.V, self.W = load_model_parameters("Canh.npz")
     
