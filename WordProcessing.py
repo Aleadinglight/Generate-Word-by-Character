@@ -76,5 +76,3 @@ print "\nLength of input & output: %i" %len(Y_train)
 
 
 
-
-
