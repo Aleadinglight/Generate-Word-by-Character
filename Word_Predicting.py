@@ -32,3 +32,4 @@ st=''
 for i in ans[1:-1]:
     st=st+i;
 print "\n",st
+
