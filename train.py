@@ -6,17 +6,17 @@ import PWNet
 from datetime import datetime
 
 def train_with_sgd(model, X_train, Y_train, learning_rate=0.0001, nepoch=1000, evaluate_loss_after=5):
-    # We keep track of the losses so we can plot them later
+    # Keep track of the losses
     losses = []
     num_examples_seen = 0
     for epoch in range(nepoch):
-        # Optionally evaluate the loss
+        # Evaluate the loss
         if (epoch % evaluate_loss_after == 0):
             loss = model.calculate_total_loss(X_train, Y_train)
             losses.append((num_examples_seen, loss))
             time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             print "%s: Examples_seen=%d Epoch=%d: Loss = %f Rate=%f" % (time, num_examples_seen, epoch, loss,learning_rate)
-            # Adjust the learning rate if loss increases
+            # Stop learning if loss increases
             if (len(losses) > 1 and losses[-1][1] > losses[-2][1]):
                 print "Setting learning rate to %f" % learning_rate
                 break
