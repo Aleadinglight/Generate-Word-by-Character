@@ -11,3 +11,5 @@ I train this using Python Numpy. The input was processed by NLTK library in Pyth
 I also put a single quote in the set in case there is something like: " I'm, You're ". However, that was not really useful since NLTK somehow classified ' as a word - which I deleted since I don't want it. But since I have to be careful with ' appear from nowhere, I let ' inside the vocab to advoid error. I will check on how to make it better later.
 
 This was train using Backpropagation Through Time. I used softmax function as the output layer.
+
+I update it with an interface. Which was written with Python Tkinter. There is a cute little window where you can write input to it and press Enter to show the predict word. (To run it in Linux, change .pyw -> .py)
