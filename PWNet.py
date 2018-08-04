@@ -18,7 +18,7 @@ class RNNnp():
     
     def feedforward(self, X):
         # X input vào là 1 từ có nhiều chữ cái, chúng ta sẽ predict chữ cái có khả năng xuất hiện tiếp theo
-        # Lấy số lượng chữ cái có trong X để tạo hidden. Vd: X="baongoc"
+        # Lấy số lượng chữ cái có trong X để tạo hidden. Vd: X="madara"
         T = len(X);
         # Phải giữ lại hidden state để lát xài
         # Thêm 1 state tại vì state[0] ko có gì để compute, nên sẽ xài state[-1]
